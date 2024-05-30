@@ -25,6 +25,7 @@ export interface LoginVO {
   sex: number
   avatar: string
   token: string
+  role: string
 }
 
 

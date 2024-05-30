@@ -7,6 +7,7 @@ import {ElMessage, ElMessageBox} from 'element-plus'
 
 const userStore = useUserStore();
 interface SikaRequestConfig extends AxiosRequestConfig {
+  /* 为true时不需要鉴权 */
   notAuth?: boolean
 }
 

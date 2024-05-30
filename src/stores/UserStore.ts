@@ -7,7 +7,8 @@ export const useUserStore = defineStore('user', ()=> {
         nickname:'',
         sex: 0,
         token:'',
-        avatar:''
+        avatar:'',
+        role: ''
     });
 
     /**
@@ -19,6 +20,7 @@ export const useUserStore = defineStore('user', ()=> {
         userVO.value.sex = loginInfo.sex;
         userVO.value.token = loginInfo.token;
         userVO.value.avatar = loginInfo.avatar;
+        userVO.value.role = loginInfo.role
     }
 
     /**
@@ -49,6 +51,10 @@ export const useUserStore = defineStore('user', ()=> {
         return userVO.value.sex
     }
 
+    const getUserRole = () => {
+        return userVO.value.role
+    }
+
     /**
      * 检查是否存在登录状态, 未登录时返回false
      */
@@ -66,6 +72,7 @@ export const useUserStore = defineStore('user', ()=> {
       userVO.value.sex= 0
       userVO.value.token=''
       userVO.value.avatar=''
+      userVO.value.role = ''
     }
 
     /**
@@ -86,6 +93,7 @@ export const useUserStore = defineStore('user', ()=> {
         getUserToken,
         getUserNickname,
         getUserSex,
+        getUserRole,
         reset,
         notLogin,
         visualSex

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useLoginHook} from "@/hooks/LoginHook";
+import {useLoginHook} from "@/hooks/login/LoginHook";
 
 const loginHook = useLoginHook();
 const {loginDTO, captchaVO, handleLogin, getCaptcha} = loginHook
